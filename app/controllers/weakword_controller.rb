@@ -1,2 +1,0 @@
-class WeakwordController < ApplicationController
-end

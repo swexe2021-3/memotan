@@ -1,0 +1,7 @@
+<%= form_for @word do |t| %>
+<%= t.label :user_word ,"単語名" %>
+<%= t.text_field :user_word %>
+<%= t.label :mean ,"単語の意味" %>
+<%= t.text_area :mean %>
+<%= t.submit '単語を登録する'%>
+<% end %>

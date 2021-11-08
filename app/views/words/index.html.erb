@@ -1,0 +1,14 @@
+<% @words.each do |w| %>
+  <p>
+    <%= w.user_word %>
+    <%= w.mean%>
+  </p>
+<% end %>
+
+<p> 
+  <%= link_to '新規単語を追加する', new_word_path %>
+</p>
+
+<p>
+  <%= link_to 'ユーザ一覧', users_path %>
+</p>

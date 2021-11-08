@@ -1,0 +1,2 @@
+module WeakwordsHelper
+end
