@@ -2,7 +2,13 @@
   <p>
     <%= w.user_word %>
     <%= w.mean%>
+    <%= link_to '削除', word_path(w), method: :delete %>
+    
+    <%= link_to '苦手追加', new_weakword_path(w)%>
+    <%= link_to '苦手削除', weakword_path(w), method: :delete %>
+    <%= link_to 'コメント追加', new_comment_path(w)%>
   </p>
+ <!-- todo 各コントローラーで各アクションの作成 -->
 <% end %>
 
 <p> 
