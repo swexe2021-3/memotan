@@ -1,0 +1,2 @@
+class Weakword < ApplicationRecord
+end
