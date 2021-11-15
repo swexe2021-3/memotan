@@ -1,5 +1,5 @@
 class WordsController < ApplicationController
-    def index
+  def index
     @words = Word.all.order(created_at: :desc)
   end
 
@@ -16,8 +16,8 @@ class WordsController < ApplicationController
       redirect_to root_path
     else
       render 'new'
-    end
- end
+    end 
+  end
 
   def destroy
     word = Word.find(params[:id])
