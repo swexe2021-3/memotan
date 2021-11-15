@@ -1,4 +1,8 @@
 class CommentsController < ApplicationController
+  def index
+    @comments = Comment.where(word_id: 3)
+  end
+  
   def new
     @comment = Comment.new
   end

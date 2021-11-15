@@ -1,0 +1,10 @@
+<% @comments.each do |c| %>
+  <p>
+    <%= c.user_comment %>
+    <%= link_to '削除', comment_path(c), method: :delete %>
+
+    
+  </p>
+<% end %>
+
+
