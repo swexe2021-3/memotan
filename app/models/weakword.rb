@@ -1,3 +1,5 @@
 class Weakword < ApplicationRecord
-  #TODO 
+  #TODO
+  belongs_to :user
+  belongs_to :word
 end
