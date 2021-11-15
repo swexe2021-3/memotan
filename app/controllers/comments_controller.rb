@@ -4,10 +4,10 @@ class CommentsController < ApplicationController
   end
   
   def create
-    user = User.find_by(uid: session[:login_uid])
-    @comment = Comment.new(user_comment: params[:word][:comment],
-                                user_id: user.id,
-                                word_id: word_id)
+    #user = User.find_by(uid: session[:login_uid])
+    @comment = Comment.new(user_comment: params[:comment][:user_comment],
+                                user_id: nil,
+                                word_id: params[:comment][:word_id])
     if @comment.save
       redirect_to root_path
     else
