@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if @user.valid?
       @user.pass = BCrypt::Password.create(params[:user][:pass])
       @user.save
-      redirect_to users_path
+      redirect_to root_path
     else
       render 'new'
     end
