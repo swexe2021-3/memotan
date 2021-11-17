@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(user_comment: params[:comment][:user_comment],
                                 user_id: nil,
                                 word_id: params[:comment][:word_id])
-    if @comment.save
+    if @comment.save!
       redirect_to root_path
     else
       render 'new'
