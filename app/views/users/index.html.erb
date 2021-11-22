@@ -1,0 +1,22 @@
+<%= link_to '新規ユーザー登録をする', new_user_path %>
+<BR>
+ユーザーidリスト
+<BR>
+<% @users.each do |user| %>
+
+    <%= user.uid %>&nbsp;&nbsp;
+    
+    <%= link_to '削除' , "/users/#{user.id}", method: :delete %>
+    <BR>
+<% end %>
+
+<p>
+  <%= link_to '登録単語一覧', words_path %>
+</p>
+
+
+
+
+<% flash.each do |key,value| %>
+  <p><%= value %><p>
+<% end %>

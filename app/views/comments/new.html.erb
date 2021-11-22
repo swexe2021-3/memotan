@@ -1,5 +1,6 @@
 <%= form_for @comment do |c| %>
 <%= c.label :user_comment ,"コメント" %>
 <%= c.text_field :user_comment %>
+<%= c.hidden_field :word_id %>
 <%= c.submit 'コメントを投稿する'%>
 <% end %>

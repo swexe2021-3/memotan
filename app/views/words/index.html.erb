@@ -5,8 +5,9 @@
     <%= link_to '削除', word_path(w), method: :delete %>
     <%= link_to '苦手追加', weakwords_path(word_id: w.id), method: :post %>
     <%= link_to '苦手削除', weakword_path(w), method: :delete %>
-    <%= link_to 'コメント追加', new_comment_path(word_id: w.id)%>
-    <%= link_to 'コメント一覧', comments_path(word_id: w.id)%>
+    <%= link_to 'コメント追加', comments_new_path(id: w.id)%>
+    <%= link_to 'コメント一覧', comments_index_path(id: w.id)%>
+    
   </p>
  <!-- todo 各コントローラーで各アクションの作成 -->
 <% end %>
