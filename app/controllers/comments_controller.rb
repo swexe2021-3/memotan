@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   def index
-    @comments = Comment.where(word_id: 3)
+    @comments = Comment.all
   end
   
   def new

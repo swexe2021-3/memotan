@@ -3,8 +3,11 @@
     <%= w.user_word %>
     <%= w.mean%>
     <%= link_to '削除', word_path(w), method: :delete %>
-    <%= link_to '苦手追加', weakwords_path(word_id: w.id), method: :post %>
-    <%= link_to '苦手削除', weakword_path(w), method: :delete %>
+    <% if w.weakwords.count > 0 %>
+      <%= link_to 'OK👍', weakword_path(w), method: :delete %>
+    <% else %>
+      <%= link_to 'NO👎', weakwords_path(word_id: w.id), method: :post %>
+    <% end %>
     <%= link_to 'コメント追加', new_comment_path(word_id: w.id)%>
     <%= link_to 'コメント一覧', comments_path(word_id: w.id)%>
   </p>
