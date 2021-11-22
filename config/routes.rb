@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :words
   resources :weakwords
   resources :comments
+  get 'comments/index/:id', to: 'comments#index', as: :comments_index
+  get 'comments/new/:id', to: 'comments#new', as: :comments_new
   get 'top/main'
   post 'top/login'
   get 'top/logout'
