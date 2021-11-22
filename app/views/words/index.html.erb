@@ -9,7 +9,7 @@
       <%= link_to 'NO👎', weakwords_path(word_id: w.id), method: :post %>
     <% end %>
     <%= link_to 'コメント追加', new_comment_path(word_id: w.id)%>
-    <%= link_to 'コメント一覧', comments_path(word_id: w.id)%>
+    <%= link_to 'コメント一覧', comments_path(id: w.id)%>
   </p>
  <!-- todo 各コントローラーで各アクションの作成 -->
 <% end %>
