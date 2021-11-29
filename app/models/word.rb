@@ -1,5 +1,8 @@
 class Word < ApplicationRecord
     #TODO: validates
+    validates :user_word, presence: true
+    validates :mean, presence: true
+    
     belongs_to :user
     has_many :weakwords, dependent: :destroy
     has_many :weak_users, through: :weakwords, source: :user
