@@ -1,0 +1,9 @@
+<%= form_for @purpose do |t| %>
+<%= t.label :user_purpose ,"目的" %>
+<%= t.text_field :user_purpose %>
+<%= t.submit '目的を追加する'%>
+<% end %>
+
+
+
+<%= link_to "戻る", :back %>
