@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_08_074919) do
+ActiveRecord::Schema.define(version: 2021_11_29_070209) do
 
   create_table "comments", force: :cascade do |t|
     t.string "user_comment"
@@ -18,6 +18,14 @@ ActiveRecord::Schema.define(version: 2021_11_08_074919) do
     t.string "user_id"
     t.string "integer"
     t.string "word_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "purposes", force: :cascade do |t|
+    t.string "user_purpose"
+    t.string "string"
+    t.string "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,11 +47,12 @@ ActiveRecord::Schema.define(version: 2021_11_08_074919) do
   end
 
   create_table "words", force: :cascade do |t|
+    t.string "purpose_id"
+    t.string "integer"
     t.string "user_word"
     t.string "string"
     t.string "mean"
     t.string "user_id"
-    t.string "integer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

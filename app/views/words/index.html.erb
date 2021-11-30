@@ -28,6 +28,7 @@
 <p>
 <% if current_user %>
   <%= link_to 'ログアウト', top_logout_path %>
+  <%= link_to '目的の追加', purposes_path %>
 <% else %>
   <%= link_to 'ログイン', top_main_path %>
 <% end %>

@@ -4,6 +4,7 @@ class Word < ApplicationRecord
     validates :mean, presence: true
     
     belongs_to :user
+    belongs_to :purpose
     has_many :weakwords, dependent: :destroy
     has_many :weak_users, through: :weakwords, source: :user
     has_many :commnents

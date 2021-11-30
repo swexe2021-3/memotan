@@ -1,0 +1,11 @@
+<% @purposes.each do |t| %>
+  <p>
+    <%= t.user_purpose %>
+    <%= link_to '削除', purpose_path(t), method: :delete %>
+  </p>
+<% end %>
+
+<p> 
+  <%= link_to '目的を追加する', new_purpose_path %>
+  <%= link_to "戻る", :back %>
+</p>

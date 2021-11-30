@@ -10,9 +10,11 @@ class WordsController < ApplicationController
 
   def create
     user = User.find_by(uid: current_user.uid)
+    purpose = Purpose.find_by(user_purpose: params[:word][:purpose])
     @word = Word.new(user_word: params[:word][:user_word], 
                     mean: params[:word][:mean],
-                    user_id: user.id)
+                    user_id: user.id,
+                    purpose_id: purpose.id)
     if @word.save
       flash[:notice] = '単語を追加しました'
       redirect_to root_path
