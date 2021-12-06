@@ -1,17 +1,24 @@
-<% @words.each do |w| %>
-  <p>
-    <%= w.user_word %>
-    <%= w.mean%>
-    <%= link_to '削除', word_path(w), method: :delete %>
-    <% if w.weakwords.count > 0 %>
-      <%= link_to 'OK👍', weakword_path(w), method: :delete %>
-    <% else %>
-      <%= link_to 'NO👎', weakwords_path(word_id: w.id), method: :post %>
-    <% end %>
-    <%= link_to 'コメント追加', comments_new_path(id: w.id)%>
-    <%= link_to 'コメント一覧', comments_index_path(id: w.id)%>
-  </p>
- <!-- todo 各コントローラーで各アクションの作成 -->
+<% p_h = Purpose.pluck(:id) %>
+<% p_h.each do |i|  %>
+  <h2> <%= Purpose.find(i).user_purpose %> </h2> 
+
+  <% @words.all.where(purpose_id: i).each do |w| %>
+    
+    
+    <p>
+      <%= w.user_word %>
+      <%= w.mean%>
+      <%= link_to '削除', word_path(w), method: :delete %>
+      <% if w.weakwords.count > 0 %>
+        <%= link_to 'OK👍', weakword_path(w), method: :delete %>
+      <% else %>
+        <%= link_to 'NO👎', weakwords_path(word_id: w.id), method: :post %>
+      <% end %>
+      <%= link_to 'コメント追加', comments_new_path(id: w.id)%>
+      <%= link_to 'コメント一覧', comments_index_path(id: w.id)%>
+    </p>
+   <!-- todo 各コントローラーで各アクションの作成 -->
+  <% end %>
 <% end %>
 
 <p> 
@@ -28,7 +35,7 @@
 <p>
 <% if current_user %>
   <%= link_to 'ログアウト', top_logout_path %>
-  <%= link_to '目的の追加', purposes_path %>
+  <%= link_to '目的一覧', purposes_path %>
 <% else %>
   <%= link_to 'ログイン', top_main_path %>
 <% end %>
