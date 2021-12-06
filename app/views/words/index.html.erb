@@ -3,8 +3,6 @@
   <h2> <%= Purpose.find(i).user_purpose %> </h2> 
 
   <% @words.all.where(purpose_id: i).each do |w| %>
-    
-    
     <p>
       <%= w.user_word %>
       <%= w.mean%>
