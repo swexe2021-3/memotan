@@ -13,12 +13,14 @@
     <div id="container">
       <div id="header">
         <%= render "top/header" %>
+        <%= render "layouts/header" %>
       </div>
       <div id="content">
         <%= yield %>
       </div>
       <div id="footer">
         <%= render "top/footer" %>
+        <%= render "layouts/footer" %>
       </div>
     </div>
   </body>

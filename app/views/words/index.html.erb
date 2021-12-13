@@ -1,6 +1,7 @@
 <% p_h = Purpose.pluck(:id) %>
 <% p_h.each do |i|  %>
   <h2> <%= Purpose.find(i).user_purpose %> </h2> 
+<<<<<<< HEAD
   <%= link_to '復習クイズへ', quiz_start_path(purpose_id: i)%>
   <% @words.all.where(purpose_id: i).each do |w| %>
     <p>
@@ -15,8 +16,26 @@
       <%= link_to 'コメント追加', comments_new_path(id: w.id)%>
       <%= link_to 'コメント一覧', comments_index_path(id: w.id)%>
     </p>
+=======
+  <table border="2">
+  <% @words.all.where(purpose_id: i).each do |w| %>
+    
+      <tr>
+        <td><%= w.user_word %></td>
+        <td><%= w.mean%></td>
+        <td><%= link_to '削除', word_path(w), method: :delete %></td>
+        <% if w.weakwords.count > 0 %>
+          <td><%= link_to 'OK👍', weakword_path(w), method: :delete %></td>
+        <% else %>
+          <td><%= link_to 'NO👎', weakwords_path(word_id: w.id), method: :post %></td>
+        <% end %>
+        <td><%= link_to 'コメント追加', comments_new_path(id: w.id)%></td>
+        <td><%= link_to 'コメント一覧', comments_index_path(id: w.id)%></td>
+    
+>>>>>>> a3efb8d6f663883ed32dcf23423e1284b5abe6aa
    <!-- todo 各コントローラーで各アクションの作成 -->
   <% end %>
+  </table>
 <% end %>
 
 <p> 
