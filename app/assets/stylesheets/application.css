@@ -9,12 +9,29 @@
   background-color: #fff8e4ff;
   text-align: center;
   padding: 35px 0px 15px 0px;
+  font-size: 18px;
 }
 
 #footer {
   background-color: #ecd39c;
   text-align: center;
   width: 100%;
+}
+
+#nav {
+  list-style: none;
+  overflow: hidden;
+}
+
+#nav li {
+  width: 170px;
+  text-align: left;
+  float: right;
+}
+ 
+#nav li a {
+  text-decoration: none;
+  font-weight: bold;
 }
 
 head {
@@ -31,17 +48,36 @@ footer {
 
 .submit_btn {
   background-color: #ffe599ff;
+  margin-left: 45%;
 }
 
 .submit_item {
-  width: 500px;
-  margin-left: 200px;
+  width: 30%;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .input_field {
-  width: 300px;
+  width: 60%;
   height: 25px;
-  margin-left: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back_btn {
+  margin-right: 0%;
+}
+
+.sub_btn {
+  margin-left: 20%;
+}
+
+.img_size {
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  vertical-align: middle;
 }
 
 h2 {
@@ -55,12 +91,14 @@ h3 {
 }
 
 table {
-  margin-left: 240px;
-  width: 600px;
+  margin-left: 15%;
+  width: 75%;
   height: 80px;
 }
 
 input[type="text"] {
-  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
   height: 15px;
 }

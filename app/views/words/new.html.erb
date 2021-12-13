@@ -1,28 +1,30 @@
 <h3>単語登録</h3>
 
 <%= form_for @word do |t| %>
-<div class="submit_item">
-  <%= t.label :purpose ,"目的" %>
-  <span class="input_field">
-    <%= t.collection_select(:purpose, Purpose.all, :user_purpose,:user_purpose, {prompt: "目的を選択"}, {class:"input_field"}) %>
-  </span>
-</div>
-<div class="submit_item">
-  <%= t.label :user_word ,"単語" %>
-  <span class="input_field">
-    <%= t.text_field :user_word, :size=>"35x10" %>
-  </span>
-</div>
-<div class="submit_item">
-  <%= t.label :mean,"意味" %>
-  <span class="input_field">
-    <%= t.text_field :mean, :size=>"35x1" %>
-  </span>
-</div>
-<%= t.submit '単語を登録する', {class:"submit_btn"}%>
+  <div class="submit_item">
+    <%= t.label :purpose ,"目的" %>
+    <span class="input_field">
+      <%= t.collection_select(:purpose, Purpose.all, :user_purpose,:user_purpose, {prompt: "目的を選択"}, {class:"input_field"}) %>
+    </span>
+  </div>
+  <div class="submit_item">
+    <%= t.label :user_word ,"単語" %>
+    <span class="input_field">
+      <%= t.text_field :user_word, :size=>"35x10" %>
+    </span>
+  </div>
+  <div class="submit_item">
+    <%= t.label :mean,"意味" %>
+    <span class="input_field">
+      <%= t.text_field :mean, :size=>"35x1" %>
+    </span>
+  </div>
+  <%= t.submit '単語を登録する', {class:"submit_btn"} %>
 <% end %>
 
-<%= link_to "新規目的の追加", new_purpose_path %>
-
-
-<%= link_to "戻る", :back %>
+<span class="back_btn">
+  <%= link_to "戻る", :back %>
+</span>
+<span class="sub_btn">
+  <%= link_to "新規目的の追加", new_purpose_path %>
+</span>
