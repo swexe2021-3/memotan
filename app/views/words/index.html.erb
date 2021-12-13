@@ -1,10 +1,8 @@
 <% p_h = Purpose.pluck(:id) %>
 <% p_h.each do |i|  %>
   <h2> <%= Purpose.find(i).user_purpose %> </h2> 
-
+  <%= link_to '復習クイズへ', quiz_start_path(purpose_id: i)%>
   <% @words.all.where(purpose_id: i).each do |w| %>
-    
-    
     <p>
       <%= w.user_word %>
       <%= w.mean%>

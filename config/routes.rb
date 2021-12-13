@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   post 'top/login'
   get 'top/logout'
   root 'top#main'
+  
+  get 'quiz/start/:purpose_id', to: 'quiz#start', as: :quiz_start
+  post 'quiz/correct', to: 'quiz#correct', as: :quiz_correct
+  get 'quiz/next_quiz', to: 'quiz#next_quiz', as: :quiz_next
+  
   #root 'words#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
