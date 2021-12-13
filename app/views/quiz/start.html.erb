@@ -1,7 +1,6 @@
-<p>この単語の意味は？
-<%= Word.find(@quizlist_w_id).user_word %>
+<p>この単語の意味は？</p>
+<p><%= Word.find(@quizlist_w_id).user_word %></p>
 <BR>
-</p>
 
 <%= form_tag(quiz_correct_path, method: :post) do %>
         <div>

@@ -1,6 +1,7 @@
-<h3>目的登録</h3>
-
 <%= form_for @purpose do |t| %>
+<div class="box">
+  
+  <h3>目的を追加</h3>
   <div class="submit_item">
     <%= t.label :user_purpose ,"目的" %>
     <span class="input_field">
@@ -8,13 +9,13 @@
     </span>
   </div>
   <%= t.submit '目的を追加する', {class:"submit_btn"} %>
-<% end %>
-
-<p>
+  <br><br>
+  
   <span class="back_btn">
     <%= link_to "戻る", :back %>
   </span>
   <span class="sub_btn">
     <%= link_to '目的一覧', purposes_path %>
   </span>
-</p>
+</div>
+<% end %>

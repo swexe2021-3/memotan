@@ -1,8 +1,9 @@
 <% if @userresponse = params[:response] == @correctmean %>
-<p> 正解です</p>
+  <p> 正解です</p>
 <% else %>
-<p> 不正解！ 正解は</p>
-<%= @correctmean  %>
+  <p>不正解！ 正解は
+  &nbsp;&nbsp;<span class="quiz_word"><%= @correctmean %></span>&nbsp;&nbsp;
+  でした！</p>
 <% end %>
 
-<%=link_to '次の問題へ',quiz_next_path %>
+<%=link_to '次の問題へ', quiz_next_path %>

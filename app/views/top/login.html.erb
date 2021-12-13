@@ -1,6 +1,7 @@
-<h3>ログイン</h3>
-
 <%= form_tag top_login_path, method: :post do %>
+<div class="box">
+  
+  <h3>ログイン</h3>
   <div class="submit_item">
     <%= label_tag :uid, 'ユーザーID' %>
     <span class="input_field">
@@ -14,11 +15,10 @@
     </span>
   </div>
   <%= submit_tag 'ログイン', class: "submit_btn" %>
-<% end %>
-
-<p>
+  
+  <br><br>
   <span class="sub_btn">
     <%= link_to '新規ユーザ追加', new_user_path %>
   </span>
-</p>
-
+</div>
+<% end %>

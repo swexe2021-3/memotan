@@ -1,11 +1,11 @@
-<h3>ユーザー登録</h3>
-
 <% flash.each do |key,value| %>
   <p><%= value %><p>
 <% end %>
 
 <%= form_for @user, url: {action: :create} do |f| %>
-  <p>
+  <div class="box">
+    
+    <h3>ユーザー登録</h3>
     <div class="submit_item">
       <%= f.label :uid, 'ユーザーID' %>
       <span class="input_field">
@@ -26,12 +26,14 @@
     </span>
   </div>
   <%= f.submit '登録', class: "submit_btn" %>
+  <br>
+  
+  <span class="back_btn">
+    <%= link_to "戻る", :back %>
+  </span>
+  <span class="sub_btn">
+    <%= link_to 'ログイン', top_main_path %>
+  </span>
+
+</div>
 <% end %>
-
-
-<span class="back_btn">
-  <%= link_to "戻る", :back %>
-</span>
-<span class="sub_btn">
-<%= link_to 'ログイン', top_main_path %>
-</span>
