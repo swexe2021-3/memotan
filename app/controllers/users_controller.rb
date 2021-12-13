@@ -13,10 +13,11 @@ class UsersController < ApplicationController
     password: params[:user][:password],
     password_confirmation: params[:user][:password_confirmation])
     if @user.save
-    redirect_to users_path
-    flash[:notice] = '新規ユーザーを追加しました'
+      render 'top/login'
+      #redirect_to users_path
+      flash[:notice] = '新規ユーザーを追加しました'
     else
-    render 'new'
+      render 'new'
     end
   end
   

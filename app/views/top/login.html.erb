@@ -1,14 +1,24 @@
 <h3>ログイン</h3>
 
 <%= form_tag top_login_path, method: :post do %>
-  <%= label_tag :uid, 'uid' %> 
-  <%= text_field_tag :uid %> 
-  <%= label_tag :pass, 'pass' %> 
-  <%= password_field_tag :pass %> 
+  <div class="submit_item">
+    <%= label_tag :uid, 'ユーザーID' %>
+    <span class="input_field">
+      <%= text_field_tag :uid %>
+    </span>
+  </div>
+  <div class="submit_item">
+    <%= label_tag :pass, 'パスワード' %>
+    <span class="input_field">
+      <%= password_field_tag :pass %>
+    </span>
+  </div>
   <%= submit_tag 'ログイン', class: "submit_btn" %>
 <% end %>
 
 <p>
-  <%= link_to '新規ユーザ追加', new_user_path %>
+  <span class="sub_btn">
+    <%= link_to '新規ユーザ追加', new_user_path %>
+  </span>
 </p>
 

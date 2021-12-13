@@ -1,26 +1,37 @@
 <h3>ユーザー登録</h3>
 
+<% flash.each do |key,value| %>
+  <p><%= value %><p>
+<% end %>
+
 <%= form_for @user, url: {action: :create} do |f| %>
-  <%= f.label :uid, 'uid' %> 
-  <%= f.text_field :uid %> 
   <p>
-  <%= f.label :password, 'パスワード' %>
-  <%= f.password_field :password %>
+    <div class="submit_item">
+      <%= f.label :uid, 'ユーザーID' %>
+      <span class="input_field">
+        <%= f.text_field :uid %>
+      </span>
+    </div>
   </p>
-  <p>
-  <%= f.label :password_confirmation, 'パスワード(確認)' %>
-  <%= f.password_field :password_confirmation %>
-  </p> 
-  <%= f.submit '登録' %>
+  <div class="submit_item">
+    <%= f.label :password, 'パスワード' %>
+    <span class="input_field">
+      <%= f.password_field :password %>
+    </span>
+  </div>
+  <div class="submit_item">
+    <%= f.label :password_confirmation, '再入力' %>
+    <span class="input_field">
+      <%= f.password_field :password_confirmation %>
+    </span>
+  </div>
+  <%= f.submit '登録', class: "submit_btn" %>
 <% end %>
 
 
 <span class="back_btn">
   <%= link_to "戻る", :back %>
 </span>
-
+<span class="sub_btn">
 <%= link_to 'ログイン', top_main_path %>
-
-<% flash.each do |key,value| %>
-  <p><%= value %><p>
-<% end %>
+</span>

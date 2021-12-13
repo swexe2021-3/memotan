@@ -1,4 +1,8 @@
 <%= link_to '新規ユーザー登録をする', new_user_path, {class:"submit_btn"} %>
+<% flash.each do |key,value| %>
+  <p><%= value %><p>
+<% end %>
+
 
 <BR>
 ユーザーidリスト
@@ -14,14 +18,6 @@
 <p>
   <%= link_to '登録単語一覧', words_path %>
 </p>
-
-
-
-
-<% flash.each do |key,value| %>
-  <p><%= value %><p>
-<% end %>
-
 
 <span class="back_btn">
   <%= link_to "戻る", :back %>
