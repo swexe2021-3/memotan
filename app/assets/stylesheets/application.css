@@ -33,16 +33,34 @@ footer {
   background-color: #ffe599ff;
 }
 
-link_to.submit {
-  
+.submit_item {
+  width: 500px;
+  margin-left: 200px;
 }
 
- h2{
-margin-left:240px;
-text-align: left
+.input_field {
+  width: 300px;
+  height: 25px;
+  margin-left: 30px;
+}
 
+h2 {
+  margin-left: 120px;
+  text-align: left;
+}
+
+h3 {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table {
   margin-left: 240px;
+  width: 600px;
+  height: 80px;
+}
+
+input[type="text"] {
+  width: 300px;
+  height: 15px;
 }
