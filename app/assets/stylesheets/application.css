@@ -110,6 +110,10 @@ footer {
   border-radius: 10px;/*角の丸み*/
 }
 
+.link {
+  color: #ffa500;
+}
+
 h2 {
   margin-left: 120px;
   text-align: left;
