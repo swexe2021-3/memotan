@@ -2,25 +2,26 @@
   <div class="box">
     
     <h3>ユーザー登録</h3>
-    <div class="submit_item">
-      <%= f.label :uid, 'ユーザーID' %>
-      <span class="input_field">
-        <%= f.text_field :uid %>
-      </span>
-    </div>
-  </p>
-  <div class="submit_item">
-    <%= f.label :password, 'パスワード' %>
-    <span class="input_field">
-      <%= f.password_field :password %>
+    <span class="submit_item">
+      <%= f.label :uid, 'ユーザーID' %>&nbsp;
     </span>
-  </div>
-  <div class="submit_item">
-    <%= f.label :password_confirmation, '再入力' %>
     <span class="input_field">
-      <%= f.password_field :password_confirmation %>
-    </span>
-  </div>
+      <%= f.text_field :uid %>
+    </span><br>
+  
+  <span class="submit_item">
+    <%= f.label :password, 'パスワード' %>&nbsp;
+  </span>
+  <span class="input_field">
+    <%= f.password_field :password %>
+  </span><br>
+  
+  <span class="submit_item">
+    <%= f.label :password_confirmation, '再入力' %>&nbsp;
+  </span>
+  <span class="input_field">
+    <%= f.password_field :password_confirmation %>
+  </span><br><br>
   <%= f.submit '登録', class: "submit_btn" %>
   <br>
   

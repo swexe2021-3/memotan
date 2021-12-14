@@ -2,18 +2,20 @@
 <div class="box">
   
   <h3>ログイン</h3>
-  <div class="submit_item">
-    <%= label_tag :uid, 'ユーザーID' %>
-    <span class="input_field">
-      <%= text_field_tag :uid %>
-    </span>
-  </div>
-  <div class="submit_item">
-    <%= label_tag :pass, 'パスワード' %>
-    <span class="input_field">
-      <%= password_field_tag :pass %>
-    </span>
-  </div>
+  <span class="submit_item">
+    <%= label_tag :uid, 'ユーザーID' %>&nbsp;
+  </span>
+  <span class="input_field">
+    <%= text_field_tag :uid %>
+  </span>
+  <br>
+  <span class="submit_item">
+    <%= label_tag :pass, 'パスワード' %>&nbsp;
+  </span>
+  <span class="input_field">
+    <%= password_field_tag :pass %>
+  </span>
+  <br><br>
   <%= submit_tag 'ログイン', class: "submit_btn" %>
   
   <br><br>

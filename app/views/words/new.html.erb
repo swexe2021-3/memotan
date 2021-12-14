@@ -2,25 +2,28 @@
 <div class="box">
   
   <h3>単語登録</h3>
-  <div class="submit_item">
-    <%= t.label :purpose ,"目的" %>
-    <span class="input_field">
-      <%= t.collection_select(:purpose, Purpose.all, :user_purpose,:user_purpose, {prompt: "目的を選択"}, {class:"input_field"}) %>
-    </span>
-  </div>
-  <div class="submit_item">
-    <%= t.label :user_word ,"単語" %>
-    <span class="input_field">
-      <%= t.text_field :user_word, :size=>"35x10" %>
-    </span>
-  </div>
-  <div class="submit_item">
-    <%= t.label :mean,"意味" %>
-    <span class="input_field">
-      <%= t.text_field :mean, :size=>"35x1" %>
-    </span>
-  </div>
+  <span class="submit_item">
+    <%= t.label :purpose ,"目的" %>&nbsp;
+  </span>
+  <span class="input_field">
+    <%= t.collection_select(:purpose, Purpose.all, :user_purpose,:user_purpose, {prompt: "目的を選択"}, {class:"input_field"}) %>
+  </span><br>
   
+  <span class="submit_item">
+    <%= t.label :user_word ,"単語" %>&nbsp;
+  </span>
+  <span class="input_field">
+    <%= t.text_field :user_word, :size=>"35x10" %>
+  </span><br>
+  
+  <span class="submit_item">
+    <%= t.label :mean,"意味" %>&nbsp;
+  </span>
+  <span class="input_field">
+    <%= t.text_field :mean, :size=>"35x1" %>
+  </span>
+  <br>
+  <br>
   <%= t.submit '単語を登録する', {class:"submit_btn"} %>
 
   <br><br>

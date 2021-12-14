@@ -48,7 +48,7 @@ footer {
 
 .submit_btn {
   background-color: #ffe599ff;
-  margin-left: 45%;
+  margin-left: 50%;
   font-size: 18px;
 }
 
@@ -68,14 +68,16 @@ footer {
 }
 
 .input_field {
-  width: 60%;
+  width: 20%;
+  min-width: 120px;
   height: 25px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .pass_field {
-  width: 60%;
+  width: 20%;
+  min-width: 125px;
   height: 25px;
   margin-left: auto;
   margin-right: auto;
@@ -106,12 +108,25 @@ footer {
   margin: 2em 5em;
   font-weight: bold;
   background: #fffcf5;
-  border: solid 3px #ffd966;/*線*/
-  border-radius: 10px;/*角の丸み*/
+  border: solid 3px #ffd966;
+  border-radius: 10px;
+}
+
+.box2 {
+  padding: 0.5em 1em;
+  margin: 2em 5em;
+  font-weight: bold;
+  background: #fffcf5;
+  border: solid 3px #ffd966;
+  border-radius: 10px;
 }
 
 .link {
   color: #ffa500;
+}
+
+.comment_field {
+  
 }
 
 h2 {
@@ -134,16 +149,18 @@ table tr:nth-child(odd) {
   background-color: #ffffd2ff;
 }
 
-input[type="text"] {
+.input[type="text"] {
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 20%;
+  min-width: 125px;
   height: 15px;
 }
 
-input[type="password"] {
+.input[type="password"] {
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 20%;
+  min-width: 125px;
   height: 15px;
 }
