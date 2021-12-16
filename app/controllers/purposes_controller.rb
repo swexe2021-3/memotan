@@ -1,6 +1,6 @@
 class PurposesController < ApplicationController
   def index
-    @purposes = Purpose.all
+    @purposes = Purpose.where(user_id: current_user.id)
   end
   
   def new
