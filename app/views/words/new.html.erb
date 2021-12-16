@@ -6,7 +6,7 @@
     <%= t.label :purpose ,"目的" %>&nbsp;
   </span>
   <span class="input_field">
-    <%= t.collection_select(:purpose, Purpose.all, :user_purpose,:user_purpose, {prompt: "目的を選択"}, {class:"input_field"}) %>
+    <%= t.collection_select(:purpose, Purpose.where(user_id: current_user.id), :user_purpose,:user_purpose, {prompt: "目的を選択"}, {class:"input_field"}) %>
   </span><br>
   
   <span class="submit_item">
