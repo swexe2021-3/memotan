@@ -29,11 +29,12 @@
         <td width="200"><%= w.mean %></td>
         <td><%= link_to image_tag("trash_can2.png", class:"img_size"), word_path(w), method: :delete %></td>
         <% if w.weakwords.count.to_i > 0 %>
+        <% logger.debug("--------------------------------------------") %>
           <td><%= link_to image_tag("weakmark_on2.png", class:"img_size"), weakword_path(w), method: :delete %></td>
         <% else %>
           <td><%= link_to image_tag("weakmark_off2.png", class:"img_size"), weakwords_path(word_id: w.id.to_i), method: :post %></td>
           <% logger.debug(w.id.to_i) %>
-          <% logger.debug("--------------------------------------------") %>
+          
         <% end %>
         <td><%= link_to image_tag("comment_all2.png", class:"img_size"), comments_new_path(id: w.id) %></td>
         <td><%= link_to image_tag("comment_add2.png", class:"img_size"), comments_index_path(id: w.id)%></td>
