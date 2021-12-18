@@ -1,6 +1,6 @@
 class WeakwordsController < ApplicationController
   def create
-
+    logger.debug("------------------------------------------------------")
     word = Word.find(params[:word_id])
     unless word.weak?(current_user)
       word.weak(current_user)
