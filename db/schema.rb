@@ -14,9 +14,7 @@ ActiveRecord::Schema.define(version: 2021_11_29_070209) do
 
   create_table "comments", force: :cascade do |t|
     t.string "user_comment"
-    t.string "string"
     t.string "user_id"
-    t.string "integer"
     t.string "word_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -24,7 +22,6 @@ ActiveRecord::Schema.define(version: 2021_11_29_070209) do
 
   create_table "purposes", force: :cascade do |t|
     t.string "user_purpose"
-    t.string "string"
     t.string "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -32,15 +29,14 @@ ActiveRecord::Schema.define(version: 2021_11_29_070209) do
 
   create_table "users", force: :cascade do |t|
     t.string "uid"
-    t.string "string"
     t.string "pass"
+    t.string "string"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "weakwords", force: :cascade do |t|
     t.string "word_id"
-    t.string "integer"
     t.string "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -48,9 +44,7 @@ ActiveRecord::Schema.define(version: 2021_11_29_070209) do
 
   create_table "words", force: :cascade do |t|
     t.string "purpose_id"
-    t.string "integer"
     t.string "user_word"
-    t.string "string"
     t.string "mean"
     t.string "user_id"
     t.datetime "created_at", null: false
