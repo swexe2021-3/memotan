@@ -2,6 +2,7 @@ class Word < ApplicationRecord
     #TODO: validates
     validates :user_word, presence: true
     validates :mean, presence: true
+    validates :purpose, presence: true
     
     belongs_to :user
     belongs_to :purpose

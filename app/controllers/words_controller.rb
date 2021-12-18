@@ -8,6 +8,7 @@ class WordsController < ApplicationController
     @word = Word.new
   end
 
+=begin
   def create
     user = User.find_by(uid: current_user.uid)
     purposeid = Purpose.find_by(user_purpose: params[:word][:purpose]).id
@@ -23,6 +24,27 @@ class WordsController < ApplicationController
     end 
   end
 
+=end
+
+  def create
+    user = User.find_by(uid: current_user.uid)
+    if Purpose.find_by(user_purpose: params[:word][:purpose])
+      purposeid = Purpose.find_by(user_purpose: params[:word][:purpose]).id
+      @word = Word.new(user_word: params[:word][:user_word], 
+                      mean: params[:word][:mean],
+                      user_id: user.id,
+                      purpose_id: purposeid)
+      if @word.save
+        flash[:notice] = '単語を追加しました'
+        redirect_to root_path
+      else
+        render 'new'
+      end
+    else
+      render '/purposes/new'
+    end
+  end
+  
   def destroy
     word = Word.find(params[:id])
     word.destroy
