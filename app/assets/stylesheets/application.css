@@ -149,6 +149,10 @@ table tr:nth-child(odd) {
   background-color: #ffffd2ff;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .input[type="text"] {
   margin-left: auto;
   margin-right: auto;

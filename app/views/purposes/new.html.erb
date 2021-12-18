@@ -1,3 +1,12 @@
+<% if @purpose.errors.present? %>
+<h3>エラーがあります。</h3>
+<ul>
+<% @purpose.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+<% end %>
+
 <% @purpose = Purpose.new unless @purpose %>
 <%= form_for @purpose do |t| %>
 <div class="box">
@@ -17,6 +26,9 @@
   </span>
   <span class="sub_btn">
     <%= link_to '目的一覧', purposes_path, class:"link" %>
+  </span>
+  <span class="sub_btn">
+    <%= link_to 'ホーム', root_path, class:"link" %>
   </span>
 </div>
 <% end %>

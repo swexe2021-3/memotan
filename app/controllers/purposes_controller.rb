@@ -11,7 +11,8 @@ class PurposesController < ApplicationController
     user = current_user
     @purpose = Purpose.new(user_purpose: params[:purpose][:user_purpose],
                            user_id: user.id)
-    if @purpose.save!
+    if @purpose.save
+      
       redirect_to root_path
     else
       render 'new'

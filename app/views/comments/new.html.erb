@@ -1,3 +1,12 @@
+<% if @comment.errors.present? %>
+<h3>エラーがあります。</h3>
+<ul>
+<% @comment.errors.full_messages.each do |msg| %>
+<li><%= msg %></li>
+<% end %>
+</ul>
+<% end %>
+
 <%= form_for @comment do |c| %>
 <div class="box">
   <h3>コメントを投稿</h3>
@@ -13,6 +22,9 @@
   <br><br>
   <span class="back_btn">
   <%= link_to "戻る", :back, class:"link" %>
+  </span>
+  <span class="sub_btn">
+    <%= link_to 'ホーム', root_path, class:"link" %>
   </span>
 </div>
 <% end %>
