@@ -1,7 +1,7 @@
 <% @purposes.each do |t| %>
   <p>
     <%= t.user_purpose %>
-    <%= link_to image_tag("trash_can2", class:"img_size"), purpose_path(t), method: :delete %>
+    <%= link_to image_tag("trash_can2.png", class:"img_size"), purpose_path(t), method: :delete %>
   </p>
 <% end %>
 
