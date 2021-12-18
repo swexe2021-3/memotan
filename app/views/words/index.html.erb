@@ -29,7 +29,7 @@
         <td width="200"><%= w.mean%></td>
         <td><%= link_to image_tag("trash_can2.png", class:"img_size"), word_path(w), method: :delete %></td>
         <% if w.weakwords.count > 0 %>
-          <td><%= link_to image_tag("weakmark_on.png", class:"img_size"), weakword_path(w), method: :delete %></td>
+          <td><%= link_to image_tag("weakmark_on2.png", class:"img_size"), weakword_path(w), method: :delete %></td>
         <% else %>
           <td><%= link_to image_tag("weakmark_off2.png", class:"img_size"), weakwords_path(word_id: w.id), method: :post %></td>
         <% end %>
