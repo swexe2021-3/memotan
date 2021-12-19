@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_070209) do
+ActiveRecord::Schema.define(version: 2021_12_19_045927) do
 
   create_table "comments", force: :cascade do |t|
     t.string "user_comment"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2021_11_29_070209) do
   end
 
   create_table "weakwords", force: :cascade do |t|
-    t.string "word_id"
+    t.integer "word_id"
     t.string "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
